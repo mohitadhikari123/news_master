@@ -1,0 +1,29 @@
+import styles from "../app/page.module.css";
+import Card from "../app/component/card";
+
+async function getData() {
+  const res = await fetch(
+    " https://newsapi.org/v2/everything?q=nation&apiKey=a9d13c06004e44b69d6d49aaa484f84e"
+  );
+  return res.json();
+}
+
+const Home = async () => {
+  const data = await getData();
+  return (
+    <>
+      <div className={styles.home_page_container}>
+        <div className={styles.headline}>
+          <h1>News - Top Headlines</h1>
+        </div>
+        <div className={styles.news_cards}>
+          {data?.articles?.map((curElem) => {
+            return <Card key={curElem.id} {...curElem} />;
+          })}
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Home;
