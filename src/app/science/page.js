@@ -3,7 +3,7 @@ import Card from "../component/card";
  
 async function getData() {
   const res = await fetch(
-    "https://newsapi.org/v2/everything?q=science&apiKey=a9d13c06004e44b69d6d49aaa484f84e"
+        "https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=a9d13c06004e44b69d6d49aaa484f84e"  
   );
   return res.json();
 }
