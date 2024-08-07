@@ -1,15 +1,11 @@
 import styles from "../page.module.css";
 import Card from "../component/card";
-
-async function getData() {
-  const res = await fetch(
-    "https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=a9d13c06004e44b69d6d49aaa484f84e"
-  );
-  return res.json();
-}
+import getData from "../api";
 
 const Home = async () => {
-  const data = await getData();
+  const data = await getData("technology");
+
+  console.log(data);
   return (
     <>
       <div className={styles.home_page_container}>

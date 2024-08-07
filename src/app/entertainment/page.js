@@ -1,15 +1,9 @@
 import styles from "../page.module.css";
 import Card from "../component/card";
+import getData from "../api";
  
-async function getData() {
-  const res = await fetch(
-    "https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=a9d13c06004e44b69d6d49aaa484f84e"
-  );
-  return res.json();
-}
-
-const Home = async () => {
-  const data = await getData();
+const Entertainment = async () => {
+  const data = await getData("entertainment");
   return (
     <>
       <div className={styles.home_page_container}>
@@ -26,4 +20,4 @@ const Home = async () => {
   );
 };
 
-export default Home;
+export default Entertainment;
