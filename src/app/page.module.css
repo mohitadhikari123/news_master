@@ -12,6 +12,7 @@
 }
 .navbar_container .logo {
   font-size: 22px;
+  color : white;
 }
 .navbar_container .navs ul {
   display: flex;
@@ -19,6 +20,7 @@
 }
 .navbar_container .navs ul a {
   font-size: 20px;
+  color : white;
 }
 .headline {
   text-align: center;
