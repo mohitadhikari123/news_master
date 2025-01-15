@@ -3,8 +3,15 @@ import Card from "../component/card";
 import getData from "../api";
 
 const Home = async () => {
-  const data = await getData("science");
-  return (
+const [data, setData] = useState(null);
+
+useEffect(() => {
+  const fetchData = async () => {
+    const result = await getData("science");
+    setData(result);
+  };
+  fetchData();
+}, []);  return (
     <>
       <div className={styles.home_page_container}>
         <div className={styles.headline}>

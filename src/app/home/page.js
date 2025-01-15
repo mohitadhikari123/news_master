@@ -9,7 +9,15 @@ async function getData() {
 }
 
 const Home = async () => {
-  const data = await getData();
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await getData();
+      setData(result);
+    };
+    fetchData();
+  }, []);
   return (
     <>
       <div className={styles.home_page_container}>
