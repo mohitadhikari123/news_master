@@ -1,6 +1,7 @@
 import styles from "../page.module.css";
 import Card from "../component/card";
 import getData from "../api";
+import { useState } from "react";
 
 const Home = async () => {
 const [data, setData] = useState(null);

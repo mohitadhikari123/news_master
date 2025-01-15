@@ -1,5 +1,6 @@
 import styles from "../page.module.css";
 import Card from "../component/card";
+import { useState } from "react";
  
 async function getData() {
   const res = await fetch(
