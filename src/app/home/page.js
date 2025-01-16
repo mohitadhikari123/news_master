@@ -1,8 +1,6 @@
-"use client";
 import styles from "../page.module.css";
 import Card from "../component/card";
-import { useState } from "react";
-
+ 
 async function getData() {
   const res = await fetch(
     "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=a9d13c06004e44b69d6d49aaa484f84e"
@@ -10,16 +8,8 @@ async function getData() {
   return res.json();
 }
 
-const Home =  () => {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await getData();
-      setData(result);
-    };
-    fetchData();
-  }, []);
+const Home = async () => {
+  const data = await getData();
   return (
     <>
       <div className={styles.home_page_container}>
