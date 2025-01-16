@@ -1,19 +1,21 @@
-'use client'
+"use client";
+import { useState, useEffect } from "react";
 import styles from "../page.module.css";
 import Card from "../component/card";
 import getData from "../api";
-import { useState } from "react";
 
-const Home = async () => {
-const [data, setData] = useState(null);
+const Home = () => {
+  const [data, setData] = useState(null);
 
-useEffect(() => {
-  const fetchData = async () => {
-    const result = await getData("science");
-    setData(result);
-  };
-  fetchData();
-}, []);  return (
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await getData("science");
+      setData(result);
+    };
+    fetchData();
+  }, []);
+
+  return (
     <>
       <div className={styles.home_page_container}>
         <div className={styles.headline}>

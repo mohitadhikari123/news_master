@@ -10,7 +10,7 @@ async function getData() {
   return res.json();
 }
 
-const Home = async () => {
+const Home =  () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
