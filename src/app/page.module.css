@@ -60,10 +60,8 @@
 .navbar_container .navs.show {
   display: flex;
   right: 0;
-  height: 52vh;
   width: auto;
   border-radius: 12px;
-  margin-top: 50px;
 }
 
 .headline {
@@ -170,8 +168,11 @@
   }
 
   .navbar_container .navs.show {
-    display: flex; /* Display the navs when toggled */
-    right: 0; /* Slide in from the right */
+    display: flex;
+    right: 0;
+    justify-content: flex-start;
+    height: 48vh;
+    margin-top: 50px;
   }
 
   .navbar_container .navs ul {
