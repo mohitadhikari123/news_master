@@ -171,13 +171,12 @@
     display: flex;
     right: 0;
     justify-content: flex-start;
-    height: 48vh;
+    height: auto;
     margin-top: 50px;
   }
 
   .navbar_container .navs ul {
     flex-direction: column; /* Display as a column for small screens */
-    gap: 15px;
     list-style: none; /* Ensure list-style is removed */
     padding: 0;
     margin: 0;
