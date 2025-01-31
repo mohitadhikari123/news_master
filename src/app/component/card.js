@@ -12,7 +12,7 @@ export default function Card(curElem) {
             <div className={styles.card_image}>
               {curElem?.urlToImage && (
                 <Image
-                  priority={true}
+                  priority={false}
                   src={curElem?.urlToImage}
                   alt="News Image"
                   width={486}
